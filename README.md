@@ -17,7 +17,7 @@ This is a system resource monitoring system that displays information about CPU,
 3. Run the Python script:
 
  ```
-python resource_monitor.py
+python main.py
  ```
 
 4. This will open the monitoring system's graphical interface.
