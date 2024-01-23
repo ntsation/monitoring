@@ -1,35 +1,35 @@
-# System Resource Monitoring
+# Monitoramento de recursos do sistema
 
-This is a system resource monitoring system that displays information about CPU, memory, and disk usage in a graphical interface.
+Este é um sistema de monitoramento de recursos do sistema que exibe informações sobre CPU, memória e uso de disco em uma interface gráfica.
 
-## Requirements
+## Requisitos
 
 - Python 3.x
-- Tkinter (Python library for graphical interface)
-- Zenity (for displaying dialog boxes in the shell)
+- Tkinter (Biblioteca para interface gráfica)
+- Zenity (Para exibir caixas de diálogo no shell)
 
-## How to Use
+## Como usar
 
-1. Clone or download the repository to your system.
+1. Clone o repositório para o seu sistema.
 
-2. Make sure you have the listed requirements installed as mentioned above.
+2. Verifique se você tem os requisitos listados instalados conforme mencionado acima.
 
-3. Run the Python script:
+3. Execute o script python:
 
  ```
 python main.py
  ```
 
-4. This will open the monitoring system's graphical interface.
+4. Isso abrirá a interface gráfica do sistema de monitoramento.
 
-5. Click on the "Check Resources" button to check resource usage. A dialog box will display information about CPU, memory, and disk usage.
+5. Clique no botão `Check Resources` para verificar o uso de recursos.Uma caixa de diálogo exibirá informações sobre CPU, memória e uso de disco.
 
-6. Click on the "Exit" button to close the application.
+6. Clique no botão `Exit` para fechar o aplicativo.
 
-## Files
-1. **resource_monitor.py**: Python script that creates the graphical interface and calls shell commands to monitor resources.
+## Arquivos
+1. **resource_monitor.py**: Script Python que cria a interface gráfica e chama os comandos do shell para monitorar os recursos.
 
-2. **monitoring.sh**: Shell file containing resource monitoring commands.
+2. **monitoring.sh**: Arquivo Shell contendo comandos de monitoramento de recursos.
 
-## Customization
-You can customize alert limits for CPU, memory, and disk usage by editing the monitoring.sh file. Adjust the CPU_LIMIT, MEM_LIMIT, and DISK_LIMIT variables as needed.
+## Customização
+Você pode personalizar limites de alerta para uso de CPU, memória e disco editando o arquivo Monitoring.sh.Ajuste as variáveis CPU_LIMIT, MEM_LIMIT e DISK_LIMIT, conforme necessário.
