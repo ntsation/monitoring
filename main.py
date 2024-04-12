@@ -2,34 +2,34 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 
-# Function to check resource usage
-def check_resources():
+# Função para verificar o uso de recursos
+def verificar_recursos():
     try:
-        # Rune the shell script and capture the output
-        output = subprocess.check_output("./monitoring.sh", shell=True).decode()
+        # Executa o script .sh e captura a saída
+        saida = subprocess.check_output("monitoring.sh", shell=True).decode()
         
-        # Analyze the information collected
-        resource_info = {}
-        for line in output.splitlines():
-            key, value = line.split('=')
-            resource_info[key] = value
+        # Analisa as informações coletadas
+        info_recursos = {}
+        for linha in saida.splitlines():
+            chave, valor = linha.split('=')
+            info_recursos[chave] = valor
 
-        message = f"CPU Usage: {resource_info['CPU_USAGE']}%\nMemory Usage: {resource_info['MEM_USAGE']}%\nDisk Usage: {resource_info['DISK_USAGE']}%"
-        messagebox.showinfo("Resource Monitor", message)
+        mensagem = f"Uso da CPU: {info_recursos['CPU_USAGE']}%\nUso de Memória: {info_recursos['MEM_USAGE']}%\nUso do Disco: {info_recursos['DISK_USAGE']}%"
+        messagebox.showinfo("Resource Monitor", mensagem)
     except Exception as e:
-        messagebox.showerror("Error", f"An error occurred: {str(e)}")
+        messagebox.showerror("Error", f"Ocorreu um erro: {str(e)}")
 
-# Create the main window
-root = tk.Tk()
-root.title("Resource Monitor")
+# Cria janela
+janela = tk.Tk()
+janela.title("Monitor de Recursos")
 
-# Create a button to check resources
-check_button = tk.Button(root, text="Check Resources", command=check_resources)
-check_button.pack(padx=20, pady=10)
+# Cria um botão para verificar recursos
+botao_verificar = tk.Button(janela, text="Verificar Recursos", command=verificar_recursos)
+botao_verificar.pack(padx=20, pady=10)
 
-# Create an exit button
-exit_button = tk.Button(root, text="Exit", command=root.quit)
-exit_button.pack(padx=20, pady=10)
+# Cria um botão de saída
+botão_sair = tk.Button(janela, text="Sair", command=janela.quit)
+botão_sair.pack(padx=20, pady=10)
 
-# Start the graphical interface
-root.mainloop()
+# Inicia a interface
+janela.mainloop()
